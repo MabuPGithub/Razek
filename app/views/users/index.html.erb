@@ -1,3 +1,95 @@
-<%= link_to 'Logout', destroy_user_session_path(), method: :delete %>
+<div class="top">
 
-<h1> Hi <%= current_user.name %> </h1>
+    
+
+
+    <h1 class="welcome"> Welcome <%= current_user.name %>! </h1>
+    <h3 class="notice"><%= notice %></h3>
+    <h3 class="alert"><%= alert %></h3>
+    
+</div>
+
+<div class="navbar-container">
+    <h2 class="db">Dashboard</h2>
+    <p class="sdp">Sample Dashboard Platform</p>
+
+    <div class="small-icon-container">
+        <i id="sic" class="fas fa-home"></i>
+        <%= link_to 'Home', article_path %>
+    </div>
+
+    <div class="small-icon-container">
+        <i id="sic" class="fas fa-video"></i>
+        <p>Option 1</p>
+    </div>
+
+    <div class="small-icon-container">
+        <i id="sic" class="fas fa-file-alt"></i>
+        <p>Option 2</p>
+    </div>
+
+    <div class="small-icon-container">
+        <i id="sic" class="fas fa-user-alt"></i>
+        <p>Profile</p>
+    </div>
+
+    <div class="small-icon-container">
+        <i id="sic" class="fas fa-sign-out-alt"></i>
+        <%= link_to 'Logout', destroy_user_session_path(), method: :delete %>
+    </div>
+</div>
+
+
+<div class="overview-parent">
+    <h1 class="oh1">Overview</h1>
+    <div class="overview-container">
+        
+        <div class="overview-item-container">
+            <i id="oic-1" class="fas fa-user-circle"></i>
+            <p>Total Users:</p>
+            <h2>68,044</h2>
+        </div>
+        <div class="overview-item-container-1">
+            <i id="oic-2" class="fas fa-medal"></i>
+            <p>Total Points:</p>
+            <h2>65,066</h2>
+        </div>
+        <div class="overview-item-container">
+            <i id="oic-3" class="fas fa-child"></i>
+            <p>Average Age:</p>
+            <h2>25</h2>
+        </div>
+        <div class="overview-item-container-1">
+            <i id="oic-4" class="fas fa-city"></i>    
+            <p>Most number of users:</p>
+            <h2>Manila City</h2>
+        </div>
+        <div class="overview-item-container">
+            <i id="oic-5" class="fas fa-mars"></i>
+            <p> Male Students:</p>
+            <h2>68%</h2>
+        </div>
+    </div>
+</div>
+
+<div class="demographics-parent">
+    <h1 class="dh1">Demographics</h1>
+    <div class="demographics-container">
+        <div id="bargraph-container" class="graph"></div>
+        <div id="linegraph-container" class="graph"></div>
+        <div id="piechart-container" class="graph"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,121 @@
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.top{
+    margin-left: 190px;
+}
+
+.db{
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+}
+
+.sdp{
+    font-size: 14px;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#sic{
+    font-size: 25px;
+}
+
+.oh1, .dh1{
+    padding-left: 20px;
+}
+
+#oic-1, #oic-3, #oic-5{
+    color: white;
+    font-size: 50px;
+}
+
+#oic-2, #oic-4{
+    color: blue;
+    font-size: 50px;
+}
+
+.navbar-container{
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.small-icon-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0px;
+    font-size: 10px;
+    padding-top: 5px;
+    margin: 20px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.overview-parent, .demographics-parent{
+    margin-left: 170px;
+    background-color:rgb(228, 225, 225);
+    border: 2px solid rgb(228, 225, 225);
+    border-radius: 20px;
+    width: 100%;
+}
+
+.demographics-parent{
+    margin-top: 20px;
+    
+}
+
+.overview-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.overview-item-container{
+    background-color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    height: 150px;
+    width: 200px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    color: white;
+    margin: 15px;
+}
+
+.overview-item-container-1{
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    height: 150px;
+    width: 200px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    color: blue;
+}
+
+.demographics-container{
+    padding: 15px;
+}
+
+.graph{
+    padding: 10px;
+}
+
+select{
+    background-color: rgb(39, 14, 99);
+}

@@ -3,21 +3,112 @@
   <head>
     <title>Myapp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <% if current_user %>
-    <li><%= link_to "Sign out", destroy_user_session_path, method: :delete  %></li>
-    <% else %>
-    <li><%= link_to "Sign up", new_user_registration_path %></li>
-    <% end %>
+
+    <script>
+    anychart.onDocumentReady(function() {
+
+      // set the data
+      var data = {
+        header: ["Name", "Users", "Points"],
+        rows: [
+          ["Day 1", 1500, 1700],
+          ["Day 2", 1250, 1400],
+          ["Day 3", 1300, 1650],
+          ["Day 4", 1150, 1400],
+          ["Day 5", 1300, 1700],
+          ["Day 6", 1300, 1700]
+      ]};
+    
+      // create the chart
+      var chart = anychart.column();
+    
+      // add data
+      chart.data(data);
+    
+      // set the chart title
+      chart.title("Sample graph");
+
+      chart.legend(true);
+    
+      // draw
+      chart.container("bargraph-container");
+      chart.draw();
+    });
+    </script>
+
+    <script>
+    anychart.onDocumentReady(function () {
+
+      // create data
+      var data = [
+        ["Jan", 10000, 12000],
+        ["Feb", 12000, 14000],
+        ["Mar", 18000, 20000],
+        ["Apr", 11000, 13000],
+        ["May", 9000],
+        ["Jun", 9000],
+        ["Jul", 9000],
+        ["Aug", 9000],
+        ["Sep", 9000],
+        ["Oct", 9000],
+        ["Nov", 9000],
+        ["Dec", 9000]
+      ];
+  
+      // create a chart
+      var chart = anychart.line();
+  
+      // create a line series and set the data
+      var series = chart.line(data);
+      
+      // set the chart title
+      chart.title("New User Accounts");
+  
+      // set the titles of the axes
+      var xAxis = chart.xAxis();
+      xAxis.title("Month");
+  
+      // set the container id
+      chart.container("linegraph-container");
+  
+      // initiate drawing the chart
+      chart.draw();
+  });
+    </script>
+
+    <script>
+    anychart.onDocumentReady(function () {
+
+      // create data
+      var data = [
+        {x: "No Accounts", value: 19},
+        {x: "On-going", value: 47},
+        {x: "Certified", value: 34},
+      ];
+  
+      // create a chart and set the data
+      var chart = anychart.pie(data);
+  
+      // set the chart title
+      chart.title("Monthly Activities");
+  
+      // set the container id
+      chart.container("piechart-container");
+  
+      // initiate drawing the chart
+      chart.draw();
+  });
+    </script>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+  <%= yield %>
   </body>
 </html>
